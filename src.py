@@ -37,6 +37,8 @@ def main():
                 text += dec[digit] + tp[i - 3]
             else:
                 text += dec[digit]
+            if i>3:  # if you don't want commas, you can delete this if block.
+                text += ","
         elif i % 3 == 2:
             text += ten[digit]
 
