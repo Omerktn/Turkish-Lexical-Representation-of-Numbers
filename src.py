@@ -1,6 +1,7 @@
 def main():
     main_num = int(input("Sayi: "))
-
+    put_commas = True
+    
     # yüz=10^2 ve vigintilyon=10^63, ith element 10^3 times greater then (i-1)th.
     tp = [" yüz", " bin", "", "", " milyon", " milyar", " trilyon", " katrilyon", " kentilyon",
           " seksilyon", " septilyon", " oktilyon", " nonilyon", " desilyon", " undesilyon",
@@ -37,7 +38,7 @@ def main():
                 text += dec[digit] + tp[i - 3]
             else:
                 text += dec[digit]
-            if i>3:  # if you don't want commas, you can delete this if block.
+            if i>3 and put_commas: 
                 text += ","
         elif i % 3 == 2:
             text += ten[digit]
